@@ -5,11 +5,19 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>クエリパラメータのテスト</title>
+        <title><c:out value="${param.title}" /> | サンプルサイト</title>
     </head>
     <body>
-        <p>送信パラメータ：<%= request.getAttribute("q") %></p>
-        <p>送信パラメータ：<c:out value="${q}" /></p>
-        <p>送信パラメータ：${q}</p>
+        <header>
+            <h1><c:out value="${param.title}" /></h1>
+        </header>
+
+        <div id="main">
+            ${param.content}
+        </div>
+
+        <footer>
+            (c) Taro Kirameki
+        </footer>
     </body>
 </html>
